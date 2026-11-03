@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Cody Zippe">
+<meta property="og:description" content="Business Administration at San Diego State. Ex Division I athlete. Builder of five live products.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://YOUR-DOMAIN/og-image.png">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Cody Zippe</title>
+<meta name="description" content="Cody Zippe: San Diego State Business Administration student, ex Division I athlete, and builder of five live products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;700;900&display=swap">
+<style>
+/* Layout concept: the page is a portfolio. A white logo plate grows, fills the screen in red, and its color becomes the next section. Black and red throughout. Projects run sideways as holdings along a rising chart, then a certificate flips to the statement. Single dark look, on purpose. */
+:root {
+  color-scheme: dark;
+  --field: #161616;
+  --field-deep: #070707;
+  --field-line: #333333;
+  --chalk: #f6f6f6;
+  --gold: #c41230;
+  --gold-deep: #7a0a1c;
+  --coin-ink: #070707;
+  --stitch: #c41230;
+  --clay: #ff4358;
+  --ink: #0b0b0b;
+  --muted: #adadad;
+  --ink-muted: #5e5e5e;
+  --haps-bg: #0b0b0b; --haps-fg: #f6f6f6; --haps-accent: #ff4358; --haps-2: #ff4358; --haps-muted: #adadad;
+  --zippe-bg: #c41230; --zippe-fg: #ffffff; --zippe-accent: #0b0b0b; --zippe-2: #0b0b0b; --zippe-muted: #ffe3e6;
+  --edge-bg: #161616; --edge-fg: #f6f6f6; --edge-accent: #ff4358; --edge-2: #c41230; --edge-muted: #adadad;
+  --home-bg: #7a0a1c; --home-fg: #ffffff; --home-accent: #ffffff; --home-2: #ffd0d6; --home-muted: #f2c6cc;
+  --lab-bg: #f1f1f1; --lab-fg: #0b0b0b; --lab-accent: #b01028; --lab-2: #3a3a3a; --lab-muted: #565656;
+  --display: "Big Shoulders Display", "Big Shoulders", "Arial Narrow", Impact, sans-serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "DM Mono", ui-monospace, Menlo, monospace;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+}
+* { box-sizing: border-box; }
+html { background: var(--field-deep); overflow-x: clip; }
+body { background: var(--field-deep); color: var(--chalk); font: 400 17px/1.55 var(--body); overflow-x: clip; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1240px; margin-inline: auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.label { font: 500 12.5px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+
+/* Top bar */
+.bar { position: fixed; inset: 0 0 auto; z-index: 40; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: calc(14px + env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-right, 0px)) 14px max(24px, env(safe-area-inset-left, 0px)); mix-blend-mode: difference; color: #fff; pointer-events: none; }
+.bar a { pointer-events: auto; text-decoration: none; }
+.bar .mark { font: 900 24px/1 var(--display); letter-spacing: .03em; }
+.bar nav { display: flex; gap: 22px; }
+.bar nav a { font: 500 12.5px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.bar nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.seam-progress { position: fixed; inset: 0 auto auto 0; z-index: 41; height: 3px; width: 100%; transform: scaleX(0); transform-origin: left; background: #ff4358; }
+
+/* Hero */
+.hero { position: relative; height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; background: radial-gradient(90% 80% at 72% 18%, #4a0812 0%, var(--field) 48%, var(--field-deep) 100%); }
+.avatar { position: absolute; z-index: 5; left: max(24px, env(safe-area-inset-left, 0px)); top: calc(56px + env(safe-area-inset-top, 0px)); width: clamp(64px, 6vw, 84px); height: clamp(64px, 6vw, 84px); border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
+#ball { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+.hero-copy { position: absolute; inset: auto 0 0 0; z-index: 4; padding-bottom: clamp(36px, 8vh, 80px); }
+.hero-copy .label { color: var(--clay); }
+h1 { font: 900 clamp(84px, min(19.5vw, 30vh), 300px)/.8 var(--display); letter-spacing: -.005em; text-transform: uppercase; margin-top: 16px; }
+h1 .line { display: block; overflow: hidden; padding-top: .05em; }
+h1 .ch { display: inline-block; }
+.hero-sub { margin-top: 24px; max-width: 46ch; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.4; color: var(--chalk); }
+.cue { position: absolute; right: max(24px, env(safe-area-inset-right, 0px)); bottom: clamp(36px, 8vh, 80px); z-index: 4; display: flex; align-items: center; gap: 10px; color: var(--muted); }
+.cue i { display: block; width: 1px; height: 44px; background: var(--muted); transform-origin: top; animation: cue 2.2s ease-in-out infinite; }
+@keyframes cue { 0% { transform: scaleY(0); } 55% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+
+/* Story */
+.story { background: var(--gold); color: #ffffff; padding-block: clamp(90px, 16vh, 180px); position: relative; z-index: 2; }
+.story .label { color: #ffffff; }
+.story p.big { margin-top: 24px; font: 700 clamp(38px, 6.4vw, 92px)/1.02 var(--display); text-wrap: pretty; max-width: 19em; }
+.tiles { margin-top: clamp(56px, 10vh, 100px); display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--ink); border: 2px solid var(--ink); }
+.tile { background: var(--field); color: var(--chalk); padding: 22px 20px 20px; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.tile b { font: 900 clamp(46px, 6vw, 84px)/.95 var(--display); color: var(--clay); font-variant-numeric: tabular-nums; }
+.tile span { font: 400 13px/1.35 var(--mono); color: var(--muted); }
+
+/* Portfolio */
+.portfolio-head { background: var(--field-deep); padding-block: clamp(80px, 14vh, 150px) clamp(48px, 8vh, 80px); }
+.portfolio-head h2, .sec-title { font: 900 clamp(64px, 12vw, 180px)/.86 var(--display); text-transform: uppercase; }
+.portfolio-head p { margin-top: 20px; max-width: 52ch; color: var(--muted); }
+.portfolio-head .label, .sec-eyebrow { color: var(--clay); margin-bottom: 14px; display: block; }
+.pin { position: relative; overflow: hidden; }
+.track { display: flex; flex-direction: column; }
+.panel { --bg: #000; --fg: #fff; --ac: #fff; --c2: #fff; --mu: #ccc; background: var(--bg); color: var(--fg); width: 100%; flex: none; padding-block: 72px 56px; position: relative; overflow: hidden; }
+.panel.haps { --bg: var(--haps-bg); --fg: var(--haps-fg); --ac: var(--haps-accent); --c2: var(--haps-2); --mu: var(--haps-muted); }
+.panel.zippe { --bg: var(--zippe-bg); --fg: var(--zippe-fg); --ac: var(--zippe-accent); --c2: var(--zippe-2); --mu: var(--zippe-muted); }
+.panel.edge { --bg: var(--edge-bg); --fg: var(--edge-fg); --ac: var(--edge-accent); --c2: var(--edge-2); --mu: var(--edge-muted); }
+.panel.home { --bg: var(--home-bg); --fg: var(--home-fg); --ac: var(--home-accent); --c2: var(--home-2); --mu: var(--home-muted); }
+.panel.lab { --bg: var(--lab-bg); --fg: var(--lab-fg); --ac: var(--lab-accent); --c2: var(--lab-2); --mu: var(--lab-muted); }
+.panel .order { position: absolute; right: -.04em; top: -.1em; font: 900 min(62vh, 44vw)/1 var(--display); color: var(--ac); opacity: .09; pointer-events: none; user-select: none; }
+.panel-in { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; }
+.copy { min-width: 0; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.copy .label { color: var(--ac); }
+.copy h3 { font: 900 clamp(58px, 12vh, 124px)/.88 var(--display); text-transform: uppercase; }
+.copy .pitch { font-size: clamp(18px, 2.4vh, 22px); line-height: 1.32; font-weight: 500; max-width: 34ch; text-wrap: pretty; }
+.copy ul { display: grid; gap: 8px; max-width: 48ch; }
+.copy li { color: var(--mu); font-size: 16px; line-height: 1.4; padding-left: 18px; position: relative; }
+.copy li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; background: var(--ac); transform: rotate(45deg); }
+.visit { display: inline-flex; align-items: center; gap: 10px; margin-top: 6px; padding: 11px 16px; background: var(--ac); color: var(--bg); text-decoration: none; font: 500 13px/1 var(--mono); letter-spacing: .05em; transition: transform .25s cubic-bezier(.2, 1.4, .4, 1); }
+.visit:hover { transform: translateY(-3px) rotate(-1deg); }
+.visit svg { width: 14px; height: 14px; transition: transform .25s; }
+.visit:hover svg { transform: translateX(4px); }
+.demo { min-width: 0; position: relative; }
+.demo-tag { font: 400 11.5px/1 var(--mono); color: var(--mu); letter-spacing: .08em; text-transform: uppercase; margin-top: 12px; }
+
+/* Panel entrance. Applies only once motion is confirmed, so the page reads fine without it. */
+.motion .panel .in { opacity: 0; transform: translateY(46px); transition: opacity .7s, transform .8s cubic-bezier(.16, 1.3, .3, 1); }
+.motion .panel.on .in { opacity: 1; transform: none; }
+.panel .in:nth-child(2) { transition-delay: .07s; } .panel .in:nth-child(3) { transition-delay: .14s; } .panel .in:nth-child(4) { transition-delay: .21s; } .panel .in:nth-child(5) { transition-delay: .28s; }
+
+/* HUD: rising chart */
+.hud { display: none; position: absolute; right: max(24px, env(safe-area-inset-right, 0px)); bottom: 20px; z-index: 6; align-items: center; gap: 12px; background: var(--field-deep); color: var(--chalk); padding: 8px 14px 8px 8px; }
+.hud svg { width: 54px; height: 54px; display: block; }
+.hud span { font: 500 12px/1.3 var(--mono); letter-spacing: .06em; }
+.hud em { display: block; font-style: normal; color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .1em; }
+
+/* HAPS demo */
+.demo svg.flow { width: 100%; height: auto; max-height: 58vh; display: block; }
+.flow text { font-family: var(--mono); font-size: 13px; fill: var(--haps-fg); }
+.flow text.sm { font-size: 11px; fill: var(--haps-muted); }
+.flow .rail { fill: none; stroke: var(--haps-muted); stroke-opacity: .4; stroke-width: 1.5; stroke-dasharray: 4 6; }
+.flow .box { fill: #1c1c1c; stroke: var(--haps-muted); stroke-opacity: .4; }
+
+/* Zippe demo */
+.docs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 20px; align-items: center; }
+.pile { display: grid; gap: 8px; }
+.sheet { background: #ffffff; color: #0b0b0b; padding: 9px 12px; font: 400 12.5px/1.2 var(--mono); box-shadow: 2px 3px 0 rgba(29, 26, 21, .2); }
+.motion .zippe .sheet { transform: translateX(-34px) rotate(-3deg); opacity: 0; transition: transform .6s cubic-bezier(.16, 1.4, .3, 1), opacity .4s; }
+.motion .zippe.on .sheet { transform: none; opacity: 1; }
+.sheet:nth-child(2) { transition-delay: .12s !important; } .sheet:nth-child(3) { transition-delay: .24s !important; } .sheet:nth-child(4) { transition-delay: .36s !important; } .sheet:nth-child(5) { transition-delay: .48s !important; }
+.panel.zippe .visit { color: #ffffff; }
+.summary { background: #ffffff; color: #0b0b0b; padding: 20px; box-shadow: 8px 8px 0 var(--zippe-2); min-width: 0; }
+.summary .t { font: 700 15px/1.2 var(--body); border-bottom: 2px solid var(--zippe-fg); padding-bottom: 8px; }
+.summary .h { font: 500 11.5px/1 var(--mono); color: #b01028; margin: 13px 0 7px; letter-spacing: .05em; text-transform: uppercase; }
+.summary i { display: block; height: 7px; background: #d6d6d6; margin-bottom: 6px; transform-origin: left; }
+.summary i:nth-of-type(2n) { width: 82%; } .summary i:nth-of-type(3n) { width: 64%; }
+.motion .zippe .summary i { transform: scaleX(0); transition: transform .6s ease-out .75s; }
+.motion .zippe.on .summary i { transform: none; }
+
+/* EdgeLog demo */
+.term { background: #0b0b0b; border: 1px solid #333333; padding: 18px; display: grid; gap: 14px; }
+.term svg { width: 100%; height: auto; display: block; max-height: 26vh; }
+.curve { fill: none; stroke: var(--edge-accent); stroke-width: 2.5; stroke-dasharray: 900; stroke-dashoffset: 0; }
+.motion .edge .curve { stroke-dashoffset: 900; transition: stroke-dashoffset 1.9s ease-out .3s; }
+.motion .edge.on .curve { stroke-dashoffset: 0; }
+.rule { display: grid; grid-template-columns: 124px minmax(0, 1fr) 42px; gap: 10px; align-items: center; font: 400 12px/1 var(--mono); color: var(--edge-muted); }
+.rule u { display: block; height: 9px; background: #2a2a2a; text-decoration: none; }
+.rule u b { display: block; height: 100%; background: var(--edge-accent); width: var(--w); }
+.motion .edge .rule u b { width: 0; transition: width 1.2s ease-out .7s; }
+.motion .edge.on .rule u b { width: var(--w); }
+.flag { background: var(--edge-2); color: #ffffff; padding: 11px 13px; font: 600 14.5px/1.3 var(--body); }
+.motion .edge .flag { transform: scale(.7); opacity: 0; transition: transform .5s cubic-bezier(.2, 1.7, .4, 1) 1.8s, opacity .2s 1.8s; }
+.motion .edge.on .flag { transform: none; opacity: 1; }
+
+/* Real estate demo */
+.phone { width: min(300px, 100%); margin-inline: auto; background: #0b0b0b; border: 8px solid #2a2a2a; border-radius: 34px; padding: 22px 13px 16px; display: flex; flex-direction: column; gap: 9px; min-height: 340px; }
+.phone .sys { text-align: center; font: 400 11px/1.2 var(--mono); color: var(--home-accent); margin-bottom: 4px; }
+.bub { max-width: 84%; padding: 9px 12px; font-size: 14.5px; line-height: 1.3; border-radius: 15px; }
+.bub.me { align-self: flex-end; background: #c41230; color: #ffffff; border-bottom-right-radius: 3px; }
+.bub.them { align-self: flex-start; background: #2a2a2a; color: #ffffff; border-bottom-left-radius: 3px; }
+.bub.report { align-self: stretch; max-width: none; background: var(--chalk); color: var(--ink); border-radius: 8px; font-weight: 600; }
+.bub.report small { display: block; font: 400 11.5px/1.3 var(--mono); color: var(--ink-muted); }
+.motion .home .bub, .motion .home .sys { transform: scale(.6) translateY(20px); opacity: 0; transition: transform .45s cubic-bezier(.2, 1.7, .4, 1), opacity .2s; }
+.motion .home.on .bub, .motion .home.on .sys { transform: none; opacity: 1; }
+.motion .home.on .phone > :nth-child(2) { transition-delay: .5s; } .motion .home.on .phone > :nth-child(3) { transition-delay: 1.1s; } .motion .home.on .phone > :nth-child(4) { transition-delay: 1.7s; } .motion .home.on .phone > :nth-child(5) { transition-delay: 2.3s; }
+
+/* Lab demo */
+.coa { background: #f8fbfb; color: var(--lab-fg); padding: 20px; box-shadow: 0 0 0 1px var(--lab-2); position: relative; }
+.coa .top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font: 500 12.5px/1.3 var(--mono); padding-bottom: 10px; border-bottom: 2px solid var(--lab-fg); }
+.coa .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 11px 0; border-bottom: 1px solid #c6d4d4; font-size: 14.5px; align-items: center; }
+.coa .row b { font: 500 11.5px/1 var(--mono); color: var(--lab-accent); border: 1.5px solid var(--lab-accent); padding: 5px 7px; letter-spacing: .06em; text-transform: uppercase; }
+.motion .lab .row b { transform: scale(2.2) rotate(-9deg); opacity: 0; transition: transform .32s cubic-bezier(.3, 1.3, .5, 1), opacity .15s; }
+.motion .lab.on .row b { transform: none; opacity: 1; }
+.motion .lab.on .row:nth-of-type(3) b { transition-delay: .5s; } .motion .lab.on .row:nth-of-type(4) b { transition-delay: .9s; } .motion .lab.on .row:nth-of-type(5) b { transition-delay: 1.3s; }
+.motion .lab.on .row:nth-of-type(2) b { transition-delay: .1s; }
+.coa .ruo { margin-top: 12px; font: 400 11.5px/1.4 var(--mono); color: var(--lab-muted); }
+
+/* Marquee */
+.marquee { background: var(--stitch); color: var(--chalk); overflow: hidden; padding-block: 12px; }
+.marquee div { white-space: nowrap; font: 900 clamp(40px, 7vw, 90px)/1 var(--display); text-transform: uppercase; width: max-content; }
+
+/* Card */
+.cardsec { background: var(--field); padding-block: clamp(70px, 12vh, 120px); }
+.cardstage { perspective: 1800px; margin-top: 32px; }
+.flip { position: relative; transform-style: preserve-3d; }
+.face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.front { display: none; }
+.back { background: var(--chalk); color: var(--ink); padding: 22px; border: 6px solid var(--clay); }
+.back h3 { font: 900 clamp(26px, 3.4vw, 38px)/1 var(--display); text-transform: uppercase; }
+.back .sub { font: 400 12.5px/1.4 var(--mono); color: var(--ink-muted); margin-top: 4px; }
+.stats { margin-top: 16px; display: grid; }
+.st-row { display: grid; grid-template-columns: 1fr; gap: 3px; padding-block: 12px; border-top: 1px solid #b9b19f; }
+.st-row.head { display: none; }
+.st-row > div { font-size: 14.5px; line-height: 1.3; min-width: 0; }
+.st-row > div:first-child { font: 700 22px/1.1 var(--display); text-transform: uppercase; }
+.st-row > div[data-l]::before { content: attr(data-l) ": "; font: 400 12px/1 var(--mono); color: var(--ink-muted); }
+.st-row .live { font-weight: 600; color: #b01028; }
+
+/* Roster */
+.roster { background: var(--field-deep); padding-block: clamp(80px, 14vh, 150px); }
+.rows { margin-top: 40px; border-bottom: 1px solid var(--field-line); }
+.ros { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px 28px; padding-block: 20px; border-top: 1px solid var(--field-line); transition: padding-left .3s cubic-bezier(.2, 1.3, .4, 1), background .3s; }
+.ros:hover { padding-left: 12px; background: var(--field); }
+.ros h3 { font: 700 clamp(26px, 3.4vw, 40px)/1.05 var(--display); text-transform: uppercase; }
+.ros p { color: var(--muted); max-width: 60ch; }
+.ros .when { font: 400 13px/1.5 var(--mono); color: var(--clay); }
+
+/* Contact */
+.contact { background: var(--gold); color: #ffffff; padding-block: clamp(80px, 15vh, 160px) 40px; overflow: hidden; }
+.contact h2 { font: 900 clamp(84px, 20vw, 320px)/.8 var(--display); text-transform: uppercase; }
+.contact .lede { margin-top: 26px; font-size: clamp(19px, 2vw, 24px); line-height: 1.32; max-width: 40ch; font-weight: 500; }
+.mail { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.mail code { font: 500 clamp(16px, 2vw, 22px)/1.3 var(--mono); background: #070707; color: var(--chalk); padding: 12px 15px; user-select: all; overflow-wrap: anywhere; }
+.mail button { font: 500 13px/1 var(--mono); padding: 13px 15px; background: transparent; color: #ffffff; border: 2px solid #ffffff; cursor: pointer; }
+.mail button:hover { background: #ffffff; color: #070707; }
+.links { margin-top: 44px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.links a { font: 500 14px/1.4 var(--mono); }
+footer { margin-top: 56px; font: 400 12px/1.5 var(--mono); }
+
+/* Desktop layout */
+@media (min-width: 900px) {
+  .panel-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+  .ros { grid-template-columns: 170px minmax(0, 1fr) minmax(0, 1.2fr); align-items: baseline; }
+  .st-row { grid-template-columns: 1.35fr 1fr 1.6fr 1.1fr 1.2fr; gap: 14px; align-items: baseline; padding-block: 11px; }
+  .st-row.head { display: grid; }
+  .st-row.head > div { font: 500 11.5px/1.2 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+  .st-row > div[data-l]::before { content: none; }
+  .back { padding: 28px 32px; }
+  .motion .front { display: flex; position: absolute; inset: 0; background: var(--field-deep); border: 6px solid var(--clay); padding: 28px 32px; overflow: hidden; flex-direction: column; justify-content: space-between; }
+  .motion .back { transform: rotateY(180deg); }
+  .motion .pin { height: 100vh; height: 100svh; }
+  .motion .track { flex-direction: row; width: max-content; height: 100%; }
+  .motion .panel { width: 100vw; height: 100%; display: flex; align-items: center; padding-block: 64px 40px; }
+  .motion .hud { display: flex; }
+}
+@media (max-width: 720px) {
+  .bar nav { display: none; }
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+  .cue { display: none; }
+  .docs { grid-template-columns: minmax(0, 1fr); }
+  .pile { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .demo svg.flow { max-height: none; }
+  .copy h3 { font-size: 15.5vw; }
+  .term svg { max-height: none; }
+}
+.front .fn { font: 900 clamp(120px, 21vw, 280px)/.8 var(--display); color: var(--chalk); text-transform: uppercase; }
+.front .top, .front .bot { display: flex; justify-content: space-between; gap: 20px; color: var(--clay); }
+.front .bot { color: var(--chalk); }
+@media (prefers-reduced-motion: reduce) { .cue i { animation: none; } }
+</style>
+
+</head>
+<body>
+<div class="seam-progress" id="seam" aria-hidden="true"></div>
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Back to top">CZ</a>
+  <nav aria-label="Sections">
+    <a href="#portfolio">Projects</a>
+    <a href="#stats">Stats</a>
+    <a href="#roster">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <canvas id="ball" aria-hidden="true"></canvas>
+  <img id="avatar" class="avatar" alt="Cody Zippe" src="headshot.jpg">
+  <img id="markImg" alt="" hidden src="logo.png">
+  <div class="hero-copy wrap" id="heroCopy">
+    <span class="label">San Diego, California</span>
+    <h1 aria-label="Cody Zippe"><span class="line" aria-hidden="true">Cody</span><span class="line" aria-hidden="true">Zippe</span></h1>
+    <p class="hero-sub">Business Administration at San Diego State. Ex Division I athlete. Builder of five live products.</p>
+  </div>
+  <div class="cue label" id="cue" aria-hidden="true">Scroll <i></i></div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <span class="label rv">The short version</span>
+    <p class="big" id="storyText">I study Business Administration at San Diego State and work at a personal injury law firm. I also taught myself to ship software. Five products I built or helped build are live today, from a service that screens scam calls for seniors to an AI that reads legal discovery. I am also an ex Division I athlete.</p>
+    <div class="tiles" id="tiles">
+      <div class="tile"><b>5</b><span>products live on the web</span></div>
+      <div class="tile"><b>D1</b><span>ex Division I athlete, San Diego State</span></div>
+      <div class="tile"><b>2027</b><span>Business Administration degree, May graduation</span></div>
+      <div class="tile"><b>70.3</b><span>IRONMAN distance, plus marathons</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="portfolio-head">
+    <div class="wrap">
+      <span class="sec-eyebrow label rv">Projects</span>
+      <h2 class="rv">The portfolio</h2>
+      <p class="rv">Five holdings, one at a time. Keep scrolling and each one takes the screen.</p>
+    </div>
+  </div>
+
+  <div class="pin" id="pin">
+    <div class="track" id="track">
+
+      <article class="panel haps" data-name="HAPS">
+        <div class="order" aria-hidden="true">1</div>
+        <div class="wrap panel-in">
+          <div class="copy">
+            <span class="label in">Holding 1 of 5. Cofounder and CEO</span>
+            <h3 class="in">HAPS</h3>
+            <p class="pitch in">Helping Aged Parents Simply. HAPS screens calls before they reach a senior's phone, and nothing changes for them: same phone, same number, no app to learn.</p>
+            <ul class="in">
+              <li>Built with cofounder Alex Spiekerman after scammers kept targeting an elderly family member.</li>
+              <li>Full stack call screening on Twilio, with a family dashboard, Stripe billing, and a mobile app in progress.</li>
+              <li>Live with a paying client. Modeled at about 88% gross margin at 10,000 subscribers.</li>
+            </ul>
+            <a class="visit in" href="https://haps.help" target="_blank" rel="noopener">haps.help <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+          </div>
+          <div class="demo in">
+            <svg class="flow" viewBox="0 0 520 330" role="img" aria-label="Diagram: trusted callers ring through, unknown callers go to voicemail with a family alert, and 911 is never screened.">
+              <path id="r1" class="rail" d="M110 60 C 190 60, 190 165, 250 165"/>
+              <path id="r2" class="rail" d="M110 165 H 250"/>
+              <path id="r3" class="rail" d="M110 270 C 190 270, 190 165, 250 165"/>
+              <path id="r4" class="rail" d="M270 165 C 340 165, 340 60, 400 60"/>
+              <path id="r5" class="rail" d="M270 165 H 400"/>
+              <path id="r6" class="rail" d="M270 165 C 340 165, 340 270, 400 270"/>
+              <rect class="box" x="4" y="38" width="106" height="44"/><text x="57" y="65" text-anchor="middle">Daughter</text>
+              <rect class="box" x="4" y="143" width="106" height="44"/><text x="57" y="170" text-anchor="middle">Unknown</text>
+              <rect class="box" x="4" y="248" width="106" height="44"/><text x="57" y="275" text-anchor="middle">911 line</text>
+              <rect class="box" x="400" y="34" width="116" height="52"/><text x="458" y="56" text-anchor="middle">Rings</text><text class="sm" x="458" y="73" text-anchor="middle">right through</text>
+              <rect class="box" x="400" y="139" width="116" height="52"/><text x="458" y="161" text-anchor="middle">Voicemail</text><text class="sm" x="458" y="178" text-anchor="middle">family alerted</text>
+              <rect class="box" x="400" y="244" width="116" height="52"/><text x="458" y="266" text-anchor="middle">Connected</text><text class="sm" x="458" y="283" text-anchor="middle">never screened</text>
+              <path d="M260 121 l38 14 v30 c0 26 -17 42 -38 50 c-21 -8 -38 -24 -38 -50 v-30 z" fill="#c41230" stroke="#f6f6f6" stroke-width="2.5"/>
+              <path d="M260 186 c-12 -9 -19 -15 -19 -24 c0 -6 5 -10 10 -10 c4 0 7 2 9 5 c2 -3 5 -5 9 -5 c5 0 10 4 10 10 c0 9 -7 15 -19 24 z" fill="#f3f6fb"/>
+              <circle r="6" fill="#ffffff"><animateMotion dur="2.6s" repeatCount="indefinite" path="M110 60 C 190 60, 190 165, 250 165 L 270 165 C 340 165, 340 60, 400 60"/></circle>
+              <circle r="6" fill="#ff4358"><animateMotion dur="2.6s" begin=".9s" repeatCount="indefinite" path="M110 165 H 400"/></circle>
+              <circle r="6" fill="#adadad"><animateMotion dur="2.6s" begin="1.7s" repeatCount="indefinite" path="M110 270 C 190 270, 190 165, 250 165 L 270 165 C 340 165, 340 270, 400 270"/></circle>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel zippe" data-name="AI Zippe Discovery">
+        <div class="order" aria-hidden="true">2</div>
+        <div class="wrap panel-in">
+          <div class="copy">
+            <span class="label in">Holding 2 of 5. Founder</span>
+            <h3 class="in">AI Zippe Discovery</h3>
+            <p class="pitch in">Law firms upload litigation discovery and get back a clean Word summary in house format.</p>
+            <ul class="in">
+              <li>Two pass AI engine classifies nine case types and picks the right sections for each one.</li>
+              <li>One renderer handles both the browser preview and the Word download.</li>
+              <li>Accounts, credits, and payments built in. Demand letters are the next product line.</li>
+            </ul>
+            <a class="visit in" href="https://aizippediscovery.com" target="_blank" rel="noopener">aizippediscovery.com <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+          </div>
+          <div class="demo in">
+            <div class="docs">
+              <div class="pile" aria-hidden="true">
+                <div class="sheet">Interrogatories</div>
+                <div class="sheet">Document requests</div>
+                <div class="sheet">Deposition</div>
+                <div class="sheet">Medical records</div>
+                <div class="sheet">Police report</div>
+              </div>
+              <div class="summary" aria-hidden="true">
+                <div class="t">Discovery Summary.docx</div>
+                <div class="h">Pass 1: Classify</div><i></i><i></i>
+                <div class="h">Pass 2: Analyze</div><i></i><i></i><i></i>
+                <div class="h">Key admissions</div><i></i><i></i>
+              </div>
+            </div>
+            <p class="demo-tag">Illustration of the workflow</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel edge" data-name="EdgeLog AI">
+        <div class="order" aria-hidden="true">3</div>
+        <div class="wrap panel-in">
+          <div class="copy">
+            <span class="label in">Holding 3 of 5. Data Analyst and Product Developer</span>
+            <h3 class="in">EdgeLog AI</h3>
+            <p class="pitch in">A trading journal and AI coach for prop firm traders. It reads your real trades and flags the tilt before it costs you the challenge.</p>
+            <ul class="in">
+              <li>CSV import, metrics engine, and prop firm rule tracking for daily loss and max drawdown.</li>
+              <li>AI coach chat grounded in the trader's own history, plus a weekly AI review.</li>
+              <li>Three plans at $9, $19, and $39 a month, priced under the named competitors.</li>
+            </ul>
+            <a class="visit in" href="https://aiedgelog.com" target="_blank" rel="noopener">aiedgelog.com <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+          </div>
+          <div class="demo in">
+            <div class="term" aria-hidden="true">
+              <svg viewBox="0 0 460 150"><path d="M0 40H460M0 80H460M0 120H460" stroke="#333333"/><path class="curve" d="M0 128 L40 116 L72 122 L110 96 L150 104 L188 76 L226 84 L262 58 L300 64 L336 34 L372 44 L392 28 L412 70 L436 62 L460 92"/></svg>
+              <div class="rule"><span>Daily loss limit</span><u><b style="--w:82%"></b></u><span>82%</span></div>
+              <div class="rule"><span>Max drawdown</span><u><b style="--w:41%"></b></u><span>41%</span></div>
+              <div class="flag">Revenge trade pattern: three entries right after a loss.</div>
+            </div>
+            <p class="demo-tag">Sample data</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel home" data-name="Real Estate HelpAI">
+        <div class="order" aria-hidden="true">4</div>
+        <div class="wrap panel-in">
+          <div class="copy">
+            <span class="label in">Holding 4 of 5. Developer</span>
+            <h3 class="in">Real Estate HelpAI</h3>
+            <p class="pitch in">An AI assistant for solo real estate agents, so a missed call stops being a missed client.</p>
+            <ul class="in">
+              <li>CMA report generator is the flagship feature.</li>
+              <li>Missed call text back, marketing help, and lead generation in one portal.</li>
+              <li>Marketing site, sign in, and a mobile friendly portal built and deployed.</li>
+            </ul>
+            <a class="visit in" href="https://kais-real-estate.vercel.app" target="_blank" rel="noopener">View the live site <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+          </div>
+          <div class="demo in">
+            <div class="phone" aria-hidden="true">
+              <div class="sys">Missed call. Texting back now.</div>
+              <div class="bub me">Sorry I missed you! Are you looking to buy or sell?</div>
+              <div class="bub them">Sell. Thinking about listing this spring.</div>
+              <div class="bub me">Great. I can send a market report today.</div>
+              <div class="bub report">CMA report ready<small>Comps, pricing, ready to send</small></div>
+            </div>
+            <p class="demo-tag" style="text-align:center">Sample conversation</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel lab" data-name="Proper Peptides">
+        <div class="order" aria-hidden="true">5</div>
+        <div class="wrap panel-in">
+          <div class="copy">
+            <span class="label in">Holding 5 of 5. Owner</span>
+            <h3 class="in">Proper Peptides</h3>
+            <p class="pitch in">A research supply storefront I built and run myself, from the code to the order table.</p>
+            <ul class="in">
+              <li>Hand built site with cart, checkout, volume pricing, and automated order emails.</li>
+              <li>Every lot traceable to its certificate of analysis, published on the site.</li>
+              <li>Tailored outreach to San Diego university labs, research organizations, and biotech startups.</li>
+            </ul>
+            <a class="visit in" href="https://theproperpeptide.com" target="_blank" rel="noopener">theproperpeptide.com <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4"/></svg></a>
+          </div>
+          <div class="demo in">
+            <div class="coa" aria-hidden="true">
+              <div class="top"><span>Certificate of Analysis</span><span>Mfg 09/2025. Best by 09/2027</span></div>
+              <div class="row"><span>Identity and purity by HPLC</span><b>Conforms</b></div>
+              <div class="row"><span>Heavy metals, USP 233</span><b>Conforms</b></div>
+              <div class="row"><span>Microbials, USP 2021 and 2022</span><b>Conforms</b></div>
+              <div class="row"><span>Lot traceable to document</span><b>Conforms</b></div>
+              <p class="ruo">Sold for research use only. Not for human or veterinary consumption.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="hud" id="hud" aria-hidden="true">
+      <svg viewBox="0 0 60 60"><path d="M4 8V54H56" fill="none" stroke="#adadad" stroke-width="1.5"/><path d="M6 48 L18 38 L30 42 L42 22 L54 10" fill="none" stroke="#adadad" stroke-opacity=".4" stroke-width="2"/><path id="runPath" d="M6 48 L18 38 L30 42 L42 22 L54 10" fill="none" stroke="#ff4358" stroke-width="2.5"/><circle id="runner" r="4" cx="6" cy="48" fill="#ffffff"/></svg>
+      <span><em>Now viewing</em><b id="hudName">HAPS</b></span>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div id="marq">HAPS &nbsp;/&nbsp; AI Zippe Discovery &nbsp;/&nbsp; EdgeLog AI &nbsp;/&nbsp; Real Estate HelpAI &nbsp;/&nbsp; Proper Peptides &nbsp;/&nbsp; HAPS &nbsp;/&nbsp; AI Zippe Discovery &nbsp;/&nbsp; EdgeLog AI &nbsp;/&nbsp; Real Estate HelpAI &nbsp;/&nbsp; Proper Peptides</div></div>
+
+<section class="cardsec" id="stats">
+  <div class="wrap" id="cardWrap">
+    <span class="sec-eyebrow label">The numbers</span>
+    <div class="cardstage">
+      <div class="flip" id="flip">
+        <div class="face front" aria-hidden="true">
+          <div class="top label"><span>Portfolio Statement</span><span>2026</span></div>
+          <div class="fn">Zippe</div>
+          <div class="bot label"><span>Business. Lending. Software.</span><span>Keep scrolling to flip</span></div>
+        </div>
+        <div class="face back">
+          <h3>Cody Zippe portfolio summary</h3>
+          <p class="sub">Five products, what they run on, and how they make money.</p>
+          <div class="stats">
+            <div class="st-row head"><div>Project</div><div>Customer</div><div>Built with</div><div>Model</div><div>Status</div></div>
+            <div class="st-row"><div>HAPS</div><div data-l="Customer">Families of seniors</div><div data-l="Built with">Fastify, Prisma, Postgres, Twilio, Next.js, Expo</div><div data-l="Model">$20 a month after a 14 day trial</div><div data-l="Status" class="live">Live, paying client</div></div>
+            <div class="st-row"><div>AI Zippe Discovery</div><div data-l="Customer">Law firms</div><div data-l="Built with">Vercel, Supabase, Claude, Stripe</div><div data-l="Model">Credits</div><div data-l="Status" class="live">Live</div></div>
+            <div class="st-row"><div>EdgeLog AI</div><div data-l="Customer">Prop firm traders</div><div data-l="Built with">Next.js, Supabase, Stripe, Claude, Recharts</div><div data-l="Model">$9 to $39 a month</div><div data-l="Status" class="live">Live</div></div>
+            <div class="st-row"><div>Real Estate HelpAI</div><div data-l="Customer">Solo agents</div><div data-l="Built with">React, Vite, Vercel</div><div data-l="Model">Monthly subscription</div><div data-l="Status" class="live">Live</div></div>
+            <div class="st-row"><div>Proper Peptides</div><div data-l="Customer">Research buyers</div><div data-l="Built with">HTML, CSS, JavaScript, Vercel, Resend</div><div data-l="Model">Direct sales</div><div data-l="Status" class="live">Live</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roster" id="roster">
+  <div class="wrap">
+    <span class="sec-eyebrow label rv">Experience</span>
+    <h2 class="sec-title rv">Background</h2>
+    <div class="rows">
+      <div class="ros rv"><span class="when">Class of May 2027</span><h3>San Diego State University</h3><p>Business Administration. College of Business Representative.</p></div>
+      <div class="ros rv"><span class="when">Ex Division I</span><h3>SDSU Athletics</h3><p>Competed at the Division I level while carrying coursework, work, and building.</p></div>
+      <div class="ros rv"><span class="when">Current</span><h3>Easton &amp; Easton, LLP</h3><p>Legal Assistant at a plaintiff side personal injury firm. I build discovery summaries, chronologies, and settlement demand materials across active cases.</p></div>
+      <div class="ros rv"><span class="when">Current</span><h3>Hyve</h3><p>Growth and strategy for a vetted membership community connecting founders, investors, and creators.</p></div>
+      <div class="ros rv"><span class="when">Off the clock</span><h3>Surf, Endurance, Modeling</h3><p>Lifelong surfer in Pacific Beach. Marathons and an IRONMAN 70.3. Model with No Ties, with shoots for Vuori.</p></div>
+    </div>
+    <span class="sec-eyebrow label rv" style="margin-top:56px">Licenses and certifications</span>
+    <div class="rows" style="margin-top:0">
+      <div class="ros rv"><span class="when">Issued Oct 2026</span><h3>Sales Management Certification</h3><p>HubSpot. Valid through Nov 2028.</p></div>
+      <div class="ros rv"><span class="when">Issued Oct 2026</span><h3>Sales Enablement Certified</h3><p>HubSpot Academy. Valid through Nov 2028.</p></div>
+      <div class="ros rv"><span class="when">Issued Feb 2025</span><h3>Bloomberg Market Concepts</h3><p>Bloomberg certification.</p></div>
+      <div class="ros rv"><span class="when">In progress</span><h3>California MLO License</h3><p>Studying for mortgage loan originator licensing on my own, so I am ready for a career in lending when I graduate.</p></div>
+      <div class="ros rv"><span class="when">In progress</span><h3>CBCA License</h3><p>Working toward my CBCA alongside my MLO licensing.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Let's talk</h2>
+    <p class="lede rv">I am looking for my next role in lending and finance, and I am always up to talk about building things.</p>
+    <div class="mail rv">
+      <code id="email">czippe8392@sdsu.edu</code>
+      <button type="button" id="copyBtn">Copy email</button>
+    </div>
+    <div class="links rv">
+      <a href="https://haps.help" target="_blank" rel="noopener">HAPS</a>
+      <a href="https://aizippediscovery.com" target="_blank" rel="noopener">AI Zippe Discovery</a>
+      <a href="https://aiedgelog.com" target="_blank" rel="noopener">EdgeLog AI</a>
+      <a href="https://kais-real-estate.vercel.app" target="_blank" rel="noopener">Real Estate HelpAI</a>
+      <a href="https://theproperpeptide.com" target="_blank" rel="noopener">Proper Peptides</a>
+    </div>
+    <footer>Cody Zippe. San Diego, California. 2026.</footer>
+  </div>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var motion = !!(window.gsap && window.ScrollTrigger) && !reduced;
+  var cs = getComputedStyle(document.documentElement);
+  var GOLD = cs.getPropertyValue("--gold").trim();
+  var GOLD_DEEP = cs.getPropertyValue("--gold-deep").trim();
+  var INK = cs.getPropertyValue("--coin-ink").trim();
+  var DISPLAY = cs.getPropertyValue("--display").trim();
+  var MONO = cs.getPropertyValue("--mono").trim();
+
+  /* The hero mark: a logo plate at true proportions, placed clear of the name. It fills the screen and becomes the next section. */
+  var canvas = document.getElementById("ball"), ctx = canvas.getContext("2d");
+  var S = { zoom: 0, yaw: .5, spin: 0, shade: 1, intro: motion ? 0 : 1 };
+  var W = 0, H = 0, DPR = 1, px = 0, mark = document.getElementById("markImg");
+  mark.addEventListener("load", function () { draw(); });
+  var box = { x0: 0, x1: 0, y0: 0, y1: 0 };
+  function size() {
+    var hero = canvas.parentElement, rect = hero.getBoundingClientRect();
+    W = rect.width; H = rect.height; DPR = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = W * DPR; canvas.height = H * DPR;
+    var gut = Math.max(24, W * .03), right = 0;
+    document.querySelectorAll("h1 .line, .hero-sub").forEach(function (el) {
+      var rg = document.createRange(); rg.selectNodeContents(el);
+      right = Math.max(right, rg.getBoundingClientRect().right - rect.left);
+    });
+    var copyTop = document.querySelector(".hero-copy .label").getBoundingClientRect().top - rect.top;
+    var av = document.getElementById("avatar").getBoundingClientRect();
+    if (W < 720) box = { x0: av.right - rect.left + 16, x1: W - gut, y0: 56, y1: copyTop - 16 };
+    else box = { x0: right + 40, x1: W - gut, y0: 64, y1: H - 40 };
+    draw();
+  }
+  function draw() {
+    var z = S.zoom, ASPECT = 1.36;
+    var availW = Math.max(40, box.x1 - box.x0), availH = Math.max(40, box.y1 - box.y0);
+    var base = Math.min(availW, availH * ASPECT, W < 720 ? W : W * .3) / 2;
+    var cx0 = (box.x0 + box.x1) / 2, cy0 = (box.y0 + box.y1) / 2 + Math.sin(S.yaw * 3) * 5;
+    var cover = Math.hypot(W, H) * .78;
+    var r = base * Math.pow(cover / base, z * z) * (.05 + .95 * S.intro);
+    var hh = r / ASPECT;
+    var cx = cx0 + (W / 2 - cx0) * z, cy = cy0 + (H / 2 - cy0) * z;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = GOLD; ctx.fillRect(cx - r, cy - hh, r * 2, hh * 2);
+    var detail = 1 - Math.min(1, Math.max(0, (z - .5) / .35));
+    if (detail > 0) {
+      ctx.globalAlpha = detail; ctx.fillStyle = "#ffffff"; ctx.fillRect(cx - r, cy - hh, r * 2, hh * 2);
+      if (mark.complete && mark.naturalWidth) {
+        var iw = r * 1.76, ih = iw * mark.naturalHeight / mark.naturalWidth;
+        ctx.drawImage(mark, cx - iw / 2, cy - ih / 2, iw, ih);
+      }
+      ctx.globalAlpha = 1;
+    }
+  }
+  size(); addEventListener("resize", size);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { size(); if (motion) ScrollTrigger.refresh(); });
+
+  /* Copy email */
+  var copyBtn = document.getElementById("copyBtn");
+  copyBtn.addEventListener("click", function () {
+    var text = document.getElementById("email").textContent;
+    var done = function () { copyBtn.textContent = "Copied"; setTimeout(function () { copyBtn.textContent = "Copy email"; }, 1800); };
+    var fall = function () { var r = document.createRange(); r.selectNodeContents(document.getElementById("email")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); copyBtn.textContent = "Selected"; };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, fall); else fall();
+  });
+
+  if (!motion) { document.querySelectorAll("svg.flow").forEach(function (s) { if (reduced && s.pauseAnimations) s.pauseAnimations(); }); return; }
+
+  /* Everything below runs only with motion available. */
+  document.documentElement.classList.add("motion");
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
+  gsap.to("#seam", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: .2 } });
+
+  /* Idle spin while the hero is on screen */
+  var heroEnd = innerHeight * 2.4, last = performance.now();
+  (function tick(now) {
+    var dt = Math.min(50, now - last); last = now;
+    if (scrollY < heroEnd + innerHeight) { S.yaw += dt * .0012; draw(); }
+    requestAnimationFrame(tick);
+  })(last);
+  addEventListener("pointermove", function (e) {
+    px = e.clientX / innerWidth - .5;
+  }, { passive: true });
+
+  /* Load sequence: tile spins in, name rises */
+  document.querySelectorAll("h1 .line").forEach(function (l) {
+    var t = l.textContent; l.textContent = "";
+    t.split("").forEach(function (ch) { var s = document.createElement("span"); s.className = "ch"; s.textContent = ch; l.appendChild(s); });
+  });
+  var intro = gsap.timeline();
+  intro.to(S, { intro: 1, spin: "+=9", duration: 1.15, ease: "power3.out" }, .1)
+    .from("h1 .ch", { yPercent: 115, rotate: 6, duration: .9, ease: "back.out(1.6)", stagger: .035 }, .45)
+    .from(".hero-copy .label, .hero-sub, #cue", { y: 22, opacity: 0, duration: .6, stagger: .1 }, 1)
+    .from("#avatar", { scale: 0, duration: .6, ease: "back.out(2)" }, .9)
+    .call(size);
+
+  /* The tile fills the screen and its color becomes the next section */
+  gsap.timeline({
+    scrollTrigger: { trigger: ".hero", start: "top top", end: "+=130%", pin: true, scrub: .6, anticipatePin: 1,
+      onRefresh: function (self) { heroEnd = self.end; } }
+  })
+    .to(S, { zoom: 1, shade: 0, ease: "none", duration: 1 }, 0)
+    .to("#heroCopy, #cue, #avatar", { opacity: 0, y: -60, ease: "none", duration: .32 }, 0);
+
+  /* Story text lights up word by word */
+  var story = document.getElementById("storyText");
+  var words = story.textContent.trim().split(/\s+/);
+  story.setAttribute("aria-label", story.textContent.trim());
+  story.textContent = "";
+  words.forEach(function (w, i) {
+    var s = document.createElement("span"); s.textContent = w; s.setAttribute("aria-hidden", "true");
+    story.appendChild(s); if (i < words.length - 1) story.appendChild(document.createTextNode(" "));
+  });
+  gsap.fromTo("#storyText span", { opacity: .13 }, { opacity: 1, stagger: .05, ease: "none",
+    scrollTrigger: { trigger: "#storyText", start: "top 78%", end: "bottom 45%", scrub: .4 } });
+
+  gsap.from("#tiles .tile", { y: 70, scale: .88, opacity: 0, duration: .75, ease: "back.out(1.7)", stagger: .1,
+    scrollTrigger: { trigger: "#tiles", start: "top 85%", once: true } });
+
+  gsap.utils.toArray(".rv").forEach(function (el) {
+    gsap.from(el, { y: 56, opacity: 0, duration: .8, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 90%", once: true } });
+  });
+
+  gsap.fromTo("#marq", { xPercent: 0 }, { xPercent: -28, ease: "none", scrollTrigger: { trigger: ".marquee", start: "top bottom", end: "bottom top", scrub: .4 } });
+
+  gsap.to(".contact h2", { xPercent: 3, ease: "none", scrollTrigger: { trigger: ".contact", start: "top bottom", end: "bottom bottom", scrub: .5 } });
+
+  var mm = gsap.matchMedia();
+  var panels = gsap.utils.toArray(".panel");
+
+  /* Desktop: the portfolio runs sideways along the chart, then the certificate flips */
+  mm.add("(min-width: 900px)", function () {
+    var track = document.getElementById("track");
+    var runPath = document.getElementById("runPath"), len = runPath.getTotalLength();
+    var runner = document.getElementById("runner"), hudName = document.getElementById("hudName");
+    runPath.style.strokeDasharray = len; runPath.style.strokeDashoffset = len;
+    var slide = gsap.to(track, {
+      x: function () { return -(track.scrollWidth - innerWidth); }, ease: "none",
+      scrollTrigger: { trigger: "#pin", start: "top top", pin: true, scrub: .5, anticipatePin: 1, invalidateOnRefresh: true,
+        end: function () { return "+=" + (track.scrollWidth - innerWidth) * 1.15; },
+        onUpdate: function (self) {
+          var pt = runPath.getPointAtLength(len * self.progress);
+          runner.setAttribute("cx", pt.x); runner.setAttribute("cy", pt.y);
+          runPath.style.strokeDashoffset = len * (1 - self.progress);
+          hudName.textContent = panels[Math.min(panels.length - 1, Math.round(self.progress * (panels.length - 1)))].dataset.name;
+        } }
+    });
+    panels.forEach(function (p, i) {
+      ScrollTrigger.create({ trigger: p, containerAnimation: i ? slide : undefined,
+        start: i ? "left 62%" : "top 70%", once: true, onEnter: function () { p.classList.add("on"); } });
+      if (i) gsap.fromTo(p.querySelector(".order"), { xPercent: 30 }, { xPercent: -24, ease: "none",
+        scrollTrigger: { trigger: p, containerAnimation: slide, start: "left right", end: "right left", scrub: true } });
+    });
+    gsap.timeline({ scrollTrigger: { trigger: "#cardWrap", start: "center center", end: "+=120%", pin: true, scrub: .6, anticipatePin: 1 } })
+      .fromTo("#flip", { rotationY: 0, rotationZ: -2, scale: .9 }, { rotationY: 180, rotationZ: 0, scale: 1, ease: "power1.inOut", duration: 1 });
+    return function () { panels.forEach(function (p) { p.classList.add("on"); }); };
+  });
+
+  /* Phone: same beats, stacked */
+  mm.add("(max-width: 899px)", function () {
+    panels.forEach(function (p) {
+      ScrollTrigger.create({ trigger: p, start: "top 72%", once: true, onEnter: function () { p.classList.add("on"); } });
+    });
+    gsap.from(".st-row", { y: 36, opacity: 0, duration: .55, stagger: .08, ease: "power2.out", scrollTrigger: { trigger: ".back", start: "top 82%", once: true } });
+  });
+})();
+</script>
+
+</body>
+</html>
